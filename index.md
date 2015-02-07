@@ -1,7 +1,5 @@
 ---
 layout: home
-title: "Recent Posts"
+title: "Code - Physics - Analysis"
 tags: [Jekyll, theme, responsive, blog, template]
-image:
-  feature: typewriter.jpg
 ---

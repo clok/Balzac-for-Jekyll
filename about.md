@@ -5,7 +5,7 @@ title: About Me
 description: Howdy!
 tags: [about]
 image:
-  feature: soft-trees.jpg
+  feature: mechwarrior.jpg
 ---
 
 ![Drawing Number One]({{ site.url }}/images/mechwarrior.jpg)
@@ -16,7 +16,7 @@ Early on I found I had a fascination with analyzing, describing and modelling sy
 
 Since graduating with a B.S. in Physics & Minor in Mathematics at The California Polytechnic State University, San Luis Obispo, a.k.a. CalPoly SLO, in 2008 I have spent my time employed as a Software Engineer working on large real-time data processing systems.  I specialize in performance analysis, especially at the hardware/software interface.  The nature of real-time data processing across multiple SI’s and physical machines makes understanding, characterizing, tuning and optimizing IPC and internal software latencies essential.  I have developed many analysis tools to assist me in modelling these aspects and wish to bring the lessons I have learned to others.
 
-The goal of this blog is to discuss the findings, lessons and curiosities I have run into through my technical work. I have experience in Perl, Python, PHP, Unix, Linux and many other things.  If you are interested in my CV please contact me at **derek(at)clokwork.net** or on [LinkedIn](http://www.linkedin.com/in/dereksm/en).  You can follow me on GitHub ([@clok](https://github.com/clok)) and on Twitter ([@cloksmith](https://twitter.com/cloksmith))!
+The goal of this blog is to discuss the findings, lessons and curiosities I have run into through my technical work. I have experience in Perl, Python, PHP, Unix, Linux and many other things.  If you are interested in my CV please contact me at `derek(at)clokwork.net` or on [LinkedIn](http://www.linkedin.com/in/dereksm/en).  You can follow me on GitHub ([@clok](https://github.com/clok)) and on Twitter ([@cloksmith](https://twitter.com/cloksmith))!
 
 I hope you enjoy!
 
