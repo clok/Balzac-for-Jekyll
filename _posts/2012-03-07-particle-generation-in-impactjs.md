@@ -13,7 +13,7 @@ image:
   <figcaption>Particle effects are made easy in ImpactJS</figcaption>
 </figure>
 
-I can’t say it enough just how empowering the ImpactJS Engine is as a developer. I thoroughly enjoy working with it everyday. Check out [PiSpace]({{ site.url }}/pispace) to see the code below in action.  Also, all my code for PiSpace is available on [github](https://github.com/clok/PiSpace) as an open repo.  The ImpactJS engine uses a modified version of John Resig’s [Simple Java Script Inheritance](http://ejohn.org/blog/simple-javascript-inheritance/) which makes extending and handling objects a breeze.  I enjoy working at a lower level than a GUI game editor, so this suits me well.  The process of creating a particle effect is as easy as spawning any other entity in the game world.  Start off by creating an *EntityParticle* by extending the ImpactJS *Entity*:
+I can’t say it enough just how empowering the ImpactJS Engine is as a developer. I thoroughly enjoy working with it everyday. Check out [PiSpace]({{ site.url }}/pispace) to see the code below in action.  Also, all my code for PiSpace is available on [github](https://github.com/clok/PiSpace) as an open repo.  The ImpactJS engine uses a modified version of John Resig’s [Simple Java Script Inheritance](http://ejohn.org/blog/simple-javascript-inheritance/) which makes extending and handling objects a breeze.  I enjoy working at a lower level than a GUI game editor, so this suits me well.  The process of creating a particle effect is as easy as spawning any other entity in the game world.  Start off by creating an `EntityParticle` by extending the ImpactJS `Entity`:
 
 ``` javascript
 EntityParticle = ig.Entity.extend({
@@ -36,78 +36,78 @@ EntityParticle = ig.Entity.extend({
   friction: { x:0, y:0 },
 ```
 
-Set some initial values to make the particle less interactive with other entities in the game world since we want the particle effects more for graphics and less for physics. In the *init* function we want to add some standard randomness to the velocities and tweak the animations to add a flickering effect by using the *currentAnim.gotoRandomFrame()* feature. This looks really good.
+Set some initial values to make the particle less interactive with other entities in the game world since we want the particle effects more for graphics and less for physics. In the `init` function we want to add some standard randomness to the velocities and tweak the animations to add a flickering effect by using the `currentAnim.gotoRandomFrame()` feature. This looks really good.
 
 ``` javascript
-init: function( x, y, settings ){
+  init: function( x, y, settings ){
     this.parent( x, y, settings );
  
     // take velocity and add randomness to vel
     var vx = this.vel.x; var vy = this.vel.y;
-    this.vel.x = (Math.random()*2 - 1)*vx;
-    this.vel.y = (Math.random()*2 - 1)*vy;
+    this.vel.x = (Math.random()`2 - 1)`vx;
+    this.vel.y = (Math.random()`2 - 1)`vy;
  
     // creates a flicker effect
     this.currentAnim.gotoRandomFrame();
  
     // init timer for fadetime
     this.idleTimer = new ig.Timer();
-},
+  },
 ```
 
-In the *update* function we will use the *lifetime* and *fadetime* instantiated in the object to fade it out over time and to determine when to remove the particle from the game world.
+In the `update` function we will use the `lifetime` and `fadetime` instantiated in the object to fade it out over time and to determine when to remove the particle from the game world.
 
 ``` javascript
-update: function(){
+  update: function(){
     // check if particle has existed past lifetime
     // if so, remove particle
     if(this.idleTimer.delta() > this.lifetime){
-         this.kill();
-         return;
+      this.kill();
+      return;
     } 
  
     // fade the particle effect using the aplha blend
     this.currentAnim.alpha = this.idleTimer.delta().map( this.lifetime - this.fadetime, this.lifetime, 1, 0 );
     this.parent();
-} 
+  } 
  
 });
 ```
 
-Now, this isn’t a fully functioning entity but it will provide a good foundation as a parent class. Let’s make a *FireGib* that we can use as a particle for fireworks and collision effects by extending the parent class above, adding in the details we need to flesh out the object:
+Now, this isn’t a fully functioning entity but it will provide a good foundation as a parent class. Let’s make a `FireGib` that we can use as a particle for fireworks and collision effects by extending the parent class above, adding in the details we need to flesh out the object:
 
 ``` javascript
 FireGib = EntityParticle.extend({
-    // shorter lifetime
-    lifetime: 1.0,
-    fadetime: 0.5, 
+  // shorter lifetime
+  lifetime: 1.0,
+  fadetime: 0.5, 
+
+  // velocity value to be set
+  vel: null, 
+
+  gravityFactor: 0, 
+
+  // bounce a little less
+  bounciness: 0.6, 
+
+  // add animation sheet of sprites
+  animSheet: new ig.AnimationSheet('media/sprites/burnpix.png',1,1), 
+
+  init: function( x, y, settings ){
+    // add ember animation
+   this.addAnim( 'idle', 0.3, [0,1,2,3] ); 
+
+   // update random velocity to create starburst effect
+   this.vel = { x: (Math.random() < 0.5 ? -1 : 1)`Math.random()`100,
+                y: (Math.random() < 0.5 ? -1 : 1)`Math.random()`100 }; 
  
-    // velocity value to be set
-    vel: null, 
- 
-    gravityFactor: 0, 
- 
-    // bounce a little less
-    bounciness: 0.6, 
- 
-    // add animation sheet of sprites
-    animSheet: new ig.AnimationSheet('media/sprites/burnpix.png',1,1), 
- 
-    init: function( x, y, settings ){
-        // add ember animation
-        this.addAnim( 'idle', 0.3, [0,1,2,3] ); 
- 
-        // update random velocity to create starburst effect
-        this.vel = { x: (Math.random() < 0.5 ? -1 : 1)*Math.random()*100,
-                     y: (Math.random() < 0.5 ? -1 : 1)*Math.random()*100 }; 
- 
-        // send to parent
-        this.parent( x, y, settings );
-    }
+    // send to parent
+    this.parent( x, y, settings );
+  }
 });
 ```
 
-We shortened the *lifetime* and *fadetime* to have the particles behave like sparks, lowered the *bounciness* and loaded the *AnimationSheet*. In the *init* function we added the animation and established a more specific random velocity to create a star burst effect. And that’s it. This will generate a single pixel sprite that will flicker.
+We shortened the `lifetime` and `fadetime` to have the particles behave like sparks, lowered the `bounciness` and loaded the `AnimationSheet`. In the `init` function we added the animation and established a more specific random velocity to create a star burst effect. And that’s it. This will generate a single pixel sprite that will flicker.
 
 <figure>
   <img src="/images/fireworks.png">
@@ -119,10 +119,10 @@ To do to add a firework effect on a title screen is use some logic in the update
 ``` javascript
 // Use timer to spawn fireworks every second
 if ( this.fireTimer.delta() > 0 ){
-    for (var i = 0; i <= 100; i++){
-        ig.game.spawnEntity( FireGib, randPos.x, randPos.y );
-    }
-    this.fireTimer.reset();
+  for (var i = 0; i <= 100; i++){
+    ig.game.spawnEntity( FireGib, randPos.x, randPos.y );
+  }
+  this.fireTimer.reset();
 }
 ```
 
@@ -137,11 +137,13 @@ On a collision with an entity we can generate a spark effect using similar logic
 // Take the vel.x values to consider relative "force of impact" and gen particles
 // accordingly. Use 1/3 ratio for sanity.
 var n = ((Math.abs(this.body.GetLinearVelocity().x) + Math.abs(edge.other.GetLinearVelocity().x))/3).round();
+
 if (n > 30) {
-    n = 30;
+  n = 30;
 }
+
 for ( var i = 0; i <= n; i++ ){
-    ig.game.spawnEntity( FireGib, edge.other.entity.pos.x, edge.other.entity.pos.y );
+  ig.game.spawnEntity( FireGib, edge.other.entity.pos.x, edge.other.entity.pos.y );
 }
 ```
 
