@@ -7,8 +7,10 @@
 
 /* Don't use black */
 
-$black:  #3b3b3b;
-$white: #f9f9f9;
+//$black:  #3b3b3b;
+$black: #f9f9f9;
+//$white: #f9f9f9;
+$white: #3b3b3b;
 
 /* Gray scale */
 
@@ -29,7 +31,7 @@ $accent: #24536B;
 
 $sans: "Source Sans Pro", "Open Sans", "Helvetica Neue", "Arial", sans-serif;
 $serif: "Calendas Plus","Crimson Text", "Hoefler Text", "Georgia", serif;
-
+$mono: "Monaco", "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
    
    
 /* Type Scale
