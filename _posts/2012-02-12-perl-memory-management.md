@@ -3,7 +3,7 @@ layout: post
 title: Memory “Management” in Perl
 description: ""
 category: articles
-tags: [ memory management, optimization, perl]
+tags: [ memory management, optimization, perl ]
 image:
   feature: mem_test_dual_noforce_oom_mem_plot.png
 ---
@@ -17,7 +17,7 @@ In my early days with Perl I have found myself viewing the memory management of 
 
 For nearly all small scale scripts there is no need to worry about how memory works in Perl. Perl uses reference counting for its garbage collection and it functions very well.  Some considerations should be taken when using different lexical types (hash, array, etc). Perl will hold onto the memory that is allocated for these types, even if undef‘d and when they fall out of scope, in case these named types are used again. You can’t always trust Perl to figure out what you want to have happen, so I have found it useful to move reused my‘d variables to the outer most logical scope to try and take advantage of this feature. Perl holds onto this memory in an attempt to increase performance since Perl is not releasing the memory to the OS and reserving it for internal use. This memory will be released by Perl while running if absolutely needed by the OS, otherwise the garbage collection will not release the memory until death. Below is a very simple example of this in action:
 
-~~~ ruby
+``` perl
 my @first;
 $first[24999999] = 1;
 my $i = 0;
@@ -36,7 +36,7 @@ for (1...25000000) {
    $second[$i] = 1;
    $i++;
 }
-~~~
+```
 
 <figure>
   <img src="/images/mem_test_dual_presized_mem_plot.png">

@@ -1,20 +1,20 @@
 title:            Clokwork
-tagline:          Code - Physics - Passion.
+tagline:          Code - Physics - Analysis
 description:      Describe your website.
 canonical: http://clokwork.net
 
 # Owner/author information
 owner:
-  name:           Cole Townsend
-  avatar:         avatar.png
-  bio:            "Aesthete & Athlete"
-  email:          cole@coletownsend.com
-  twitter:        twnsndco
-  github:         coletownsend
-  instagram:      ctrunsthis
-  dribbble:       coletownsend
-  disqus:         balzac
-  location:       "Buffalo, NY"
+  name:           Derek Smith
+  avatar:         mechwarrior.jpg
+  bio:            "Code. Physics."
+  email:          derek@clokwork.net
+  twitter:        cloksmith
+  github:         clok
+  #instagram:      ctrunsthis
+  #dribbble:       coletownsend
+  #disqus:         balzac
+  location:       "Austin, TX"
   # Plug in your disqus shortname!
 
 tools:
@@ -36,7 +36,7 @@ links:
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/Chicago
 future:      true
-highlighter: pygments
+# highlighter: pygments
 markdown:    kramdown
 
 kramdown:
@@ -44,14 +44,17 @@ kramdown:
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
-  use_coderay: true
+  input: GFM
+  syntax_highlighter: rouge
+  #use_coderay: true
 
-  coderay:
-    coderay_line_numbers: table
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 2
-    coderay_bold_every: 10
-    coderay_css: class
+  #coderay:
+  #  coderay_line_numbers: table
+  #  coderay_break_lines: true
+  #  coderay_line_numbers_start: 1
+  #  coderay_tab_width: 2
+  #  coderay_bold_every: 10
+  #  coderay_css: class
 
 sass:
   style: :compressed
