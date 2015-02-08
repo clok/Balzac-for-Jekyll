@@ -28,13 +28,13 @@ This made it VERY difficult to understand why my objects weren’t behaving prop
 </figure>
 
 ``` plaintext
-<C-x h> <M-%> then `;` <enter>  `;`  <C-q C-j>  <enter> <!>
-<C-x h> <M-%> then `{` <enter> `{` <C-q C-j> <enter> <!>
-<C-x h> <M-%> then `};` <enter> <C-q C-j> `};` <enter> <!>
-<C-x h> <C-M-\>
+1. <C-x h> <M-%> then `;` <enter>  `;`  <C-q C-j>  <enter> <!>
+2. <C-x h> <M-%> then `{` <enter> `{` <C-q C-j> <enter> <!>
+3. <C-x h> <M-%> then `};` <enter> <C-q C-j> `};` <enter> <!>
+4. <C-x h> <C-M-\>
 Note: Do not tpye back-ticks. <action> means to perform that user input.
 ```
-<br>
+
 <figure>
   <img src="/images/emacs_cleaned_up.png">
   <figcaption>After</figcaption>

@@ -11,7 +11,7 @@ tags: [ Box2d, Code, Fun, Impact Engine, ImpactJS, JavaScript ]
   <figcaption>PiSpace Ttile Screen</figcaption>
 </figure>
 
-It’s been a busy week and lots of fun work has been completed on [PiSpace]({{ site.url }}/pispace). I have updated the version online and released the code on [GitHub](https://github.com/clok/PiSpace! Please feel free to fork the code and tweak what you like. The published code includes assets and code entities. The Impact Engine is a licensed engine, so if you have a license then just place the code in the standard impact root directory. Also, I am on [PointOfImpact](http://www.pointofimpactjs.com/games/view/34/pispace) which is a great source for the Impact Engine.
+It’s been a busy week and lots of fun work has been completed on [PiSpace]({{ site.url }}/pispace). I have updated the version online and released the code on [GitHub](https://github.com/clok/PiSpace) Please feel free to fork the code and tweak what you like. The published code includes assets and code entities. The Impact Engine is a licensed engine, so if you have a license then just place the code in the standard impact root directory. Also, I am on [PointOfImpact](http://www.pointofimpactjs.com/games/view/34/pispace) which is a great source for the Impact Engine.
 
 The new features for v0.2:
 
