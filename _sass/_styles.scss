@@ -632,9 +632,12 @@ footer {
         bottom: 8px;
         font-family: $sans;
         text-transform: uppercase;
-        color: transparentize($white, .9);
+        color: transparentize($white, .5);
         a {
-            color: transparentize($white, .7);
+            color: transparentize($white, .5);
+        }
+        b {
+            color: #296b00;
         }
     }
     
