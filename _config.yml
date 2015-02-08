@@ -7,13 +7,11 @@ canonical: http://clokwork.net
 owner:
   name:           Derek Smith
   avatar:         mechwarrior.jpg
-  bio:            "Code. Physics."
+  bio:            "Code. Physics. Analysis."
   email:          derek@clokwork.net
   twitter:        cloksmith
   github:         clok
-  #instagram:      ctrunsthis
-  #dribbble:       coletownsend
-  #disqus:         balzac
+  instagram:      clokwork
   location:       "Austin, TX"
   # Plug in your disqus shortname!
 
@@ -53,4 +51,4 @@ sass:
 permalink:   /:categories/:title
 
 include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]
+exclude: ["lib", "config.rb", "Gemfile", "Gemfile.lock", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]

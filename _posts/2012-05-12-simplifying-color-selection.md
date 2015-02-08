@@ -41,7 +41,7 @@ A few utility functions that are helpful for browser compatibility and the such:
 
 Using this method has greatly improved my asset pipeline speed and greatly improved the performance on my games.
 
-The [ImpactJS](http://impactjs.com/) plugin version of this code can be found on [GitHub]((https://github.com/clok/impactjs-color-picker/). Here is the complete stand-alone object code:
+The [ImpactJS](http://impactjs.com/) plugin version of this code can be found on [GitHub](https://github.com/clok/impactjs-color-picker/). Here is the complete stand-alone object code:
 
 ``` javascript
 /*
