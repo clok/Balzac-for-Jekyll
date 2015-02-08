@@ -5,7 +5,7 @@ description: ""
 category: articles
 tags: [ Box2d, Code, Color, Experiment, Game Development, HTML5, ImpactJS, JavaScript, optimization, PiSpace ]
 image:
-  feature: color-select-sample-highres.png
+  feature: color-select-sample.png
 ---
 
 <figure>
