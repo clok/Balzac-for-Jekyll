@@ -1,5 +1,5 @@
 ---
 layout: home
 title: "Code - Physics - Analysis"
-tags: [Jekyll, theme, responsive, blog, template]
+tags: [Jekyll, responsive, blog, code, programming, software, javascript, physics, ruby, capistrano, perl]
 ---
