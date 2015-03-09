@@ -6,3 +6,5 @@ _site
 
 # bundle based stuff
 Gemfile.lock
+
+.DS_Store

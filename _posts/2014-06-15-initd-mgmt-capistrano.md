@@ -3,7 +3,7 @@ layout: post-no-feature
 title: Managing init.d services with Capistrano
 description: "Time to get a little meta."
 category: articles
-tags: [ Capistrano, Ruby, meta ]
+tags: [ Capistrano, Ruby, meta, DevOps ]
 ---
 
 I really do love Capistrano. Doing a little ruby-fu with some cap-fu you can quickly and cleanly generate useful management tasks.

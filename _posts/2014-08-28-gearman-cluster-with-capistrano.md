@@ -3,7 +3,7 @@ layout: post-no-feature
 title: Gearman + Capistrano = Awesome
 description: "Managing Gearman servers with capistrano."
 category: articles
-tags: [ Capistrano, Ruby, meta ]
+tags: [ Capistrano, Ruby, meta, Gearman, Scalability, DevOps ]
 ---
 
 To properly monitor and maintain your Gearman cluster, you will need to use the `mod-gearman` tools. [You can find them here](https://labs.consol.de/nagios/mod-gearman/).
