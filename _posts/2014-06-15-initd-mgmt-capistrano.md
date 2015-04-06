@@ -43,4 +43,4 @@ Under the `namespace` `:apache` we have:
 
 This will take the four symbols (`:start`, `:stop`, `:restart`, `:reload`) and it will generate `desc` and `task` under the namespace. The `httpd` service above has commands in the `init.d` file that are associated with these tasks. 
 
-And with that, you have a full suite of management cap tasks for your serive.
+And with that, you have a full suite of management cap tasks for your service.

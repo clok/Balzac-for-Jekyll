@@ -42,7 +42,7 @@ Compare this against the typical integrations that are out there:
 </figure>
 
 
-Here is the code that I put together to get that output. I would like to put this in a gem for capistrano since I believe it would be hlpful to others.
+Here is the code that I put together to get that output. I would like to put this in a gem for capistrano since I believe it would be helpful to others.
 
 ``` ruby
 namespace :slack do

@@ -6,7 +6,7 @@ category: articles
 tags: [ Capistrano, HipChat, Ruby ]
 ---
 
-The `hipchat` gem has many features that the default `capistrano` integration does not take advantage of. This is quick run down of how I integrated a more full featured use of the gem. This particular walkthrough is for integrating with Capistano 3.
+The `hipchat` gem has many features that the default `capistrano` integration does not take advantage of. This is quick run down of how I integrated a more full featured use of the gem. This particular walk-through is for integrating with Capistano 3.
 
 First off, in your `deploy.rb` file `require` the HipChat gem. We will also need to set a few state wide symbols that will be used throughout the cap tasks. NOTE: DO NOT `require 'hipchat/capistrano'`. This will cause the old capistrano integration to take over. I have found that the old capistrano hipchat integration to be flawed, mainly confusing stages that are being acted on.
 
@@ -33,7 +33,7 @@ namespace :hipchat do
 end
 ```
 
-What I like about this method is that I am able to control the Username, Message, Notification and Color with every call. Using the capistrano `fetch` method, I am able to call on the many different state wide variables I hav setup to make the overall pattern highly repeatable.
+What I like about this method is that I am able to control the `Username`, `Message`, `Notification` and `Color` with every call. Using the capistrano `fetch` method, I am able to call on the many different state wide variables I have setup to make the overall pattern highly repeatable.
 
 Taking the pattern in the above example, it's easy to place that into another cap task:
 
