@@ -5,4 +5,7 @@ gem 'jekyll-minibundle'
 gem 'rake'
 gem 'rouge'
 gem 'therubyracer'
-
+gem 'capistrano', '~> 3'
+gem 'capistrano-bundler', '~> 1.1.2'
+gem 'capistrano-rvm'
+gem 'rvm1-capistrano3'
