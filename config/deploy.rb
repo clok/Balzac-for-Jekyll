@@ -11,6 +11,13 @@ set :linked_dirs, fetch(:linked_dirs, []).push('demos', 'pispace', 'box2dpong')
 
 set :format, :pretty
 namespace :deploy do
+  before :starting, :ask_branch
+
+  desc 'Get branch to deploy'
+  task :ask_branch do
+    set :branch, ask("a branch to deploy or press ENTER for default. Default branch is", `git rev-parse --abbrev-ref HEAD`.chomp)
+  end
+  
   task :update_jekyll do
     on roles(:app) do
       #within "#{deploy_to}/current" do
